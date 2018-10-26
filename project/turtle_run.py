@@ -18,13 +18,16 @@ def polygon(t, l, n):
 		t.begin_fill()
 		t.lt(angle)
 		t.end_fill()
- 
+
 
 
 length = 5
 
 init()
 sides = int(input("How many sides? "))
+length = int(input("Specify Length (5 recommended)"))
+width = int(input("Specify Width (3 recommended)"))
+
 for count in range(100):
   color = random.choice(colors) #Choose a random color
   shape = turtle.Turtle()
@@ -36,8 +39,8 @@ for count in range(100):
   # shape.right(135)
   shape.color(color)
   length = length + 5
-  shape.width(3)
+  shape.width(width)
   polygon(shape, length, sides)
-  
-  
+
+
 w.exitonclick()
